@@ -36,3 +36,5 @@ Actividades:
 - Agregar una función que permita añadir nuevas obras al array galería.
 
 - Agregar una función que permita cambiar el estado de isExhibited de una obra específica enviándole el id.
+
+URL: [text](https://tomascei.github.io/manual-md-fullstack/?cap=fullstack#node-npm)
