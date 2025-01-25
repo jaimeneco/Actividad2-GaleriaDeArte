@@ -63,3 +63,23 @@ console.log(findWork("starry night"));
 //EJERCICIO 5: Usa some para verificar si hay obras en la galería de un año específico (por ejemplo, 1503).
 //-----------------------------------------------------------------
 console.log("Ejercicio 5");
+
+//-----------------------------------------------------------------
+//EJERCICIO 6: Emplea every para comprobar si todas las obras son previas a un cierto año, por ejemplo tu año de nacimiento.
+//-----------------------------------------------------------------
+console.log("Ejercicio 6");
+
+//-----------------------------------------------------------------
+//EJERCICIO 7: Usa findIndex para encontrar la posición en el array de una obra específica.
+//-----------------------------------------------------------------
+console.log("Ejercicio 7");
+
+//-----------------------------------------------------------------
+//EJERCICIO 8: Agregar una función que permita añadir nuevas obras al array galería.
+//-----------------------------------------------------------------
+console.log("Ejercicio 7");
+
+//-----------------------------------------------------------------
+//EJERCICIO 9: Agregar una función que permita cambiar el estado de isExhibited de una obra específica enviándole el id.
+//-----------------------------------------------------------------
+console.log("Ejercicio 7");
