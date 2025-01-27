@@ -77,22 +77,69 @@ console.log(findWork("starry night"));
 //-----------------------------------------------------------------
 console.log("Ejercicio 5");
 
+const comprobarEdad = 1503;
+
+const obraEdad = ArtGallery.some(obra => obra.year === comprobarEdad);
+
+console.log(`¿Hay obras del año ${comprobarEdad}?`, obraEdad);
+
 //-----------------------------------------------------------------
 //EJERCICIO 6: Emplea every para comprobar si todas las obras son previas a un cierto año, por ejemplo tu año de nacimiento.
 //-----------------------------------------------------------------
 console.log("Ejercicio 6");
+const miNacimiento = 1997;
+
+const obrasAnteriores = ArtGallery.every(obra => obra.year < miNacimiento);
+
+console.log(`¿Todas las obras son anteriores a ${miNacimiento}?`, obrasAnteriores);
+
 
 //-----------------------------------------------------------------
 //EJERCICIO 7: Usa findIndex para encontrar la posición en el array de una obra específica.
 //-----------------------------------------------------------------
 console.log("Ejercicio 7");
 
+const titleEncuentra = "Mona Lisa";
+
+const obraIndex = ArtGallery.findIndex(obra => obra.title === titleEncuentra);
+
+if (obraIndex !== -1) {
+    console.log(`La obra "${titleEncuentra}" está en la posición ${obraIndex} del array.`);
+} else {
+    console.log(`La obra "${titleEncuentra}" no se encontró en el array.`);
+}
+
 //-----------------------------------------------------------------
 //EJERCICIO 8: Agregar una función que permita añadir nuevas obras al array galería.
 //-----------------------------------------------------------------
 console.log("Ejercicio 7");
 
+function addObra(artist, title, year, isExhibited) {
+    const nuevoId = ArtGallery.length > 0 ? ArtGallery[ArtGallery.length - 1].id + 1 : 1; // Generar nuevo ID
+    const nuevaObra = { id: nuevoId, artist, title, year, isExhibited };
+    ArtGallery.push(nuevaObra); // Añadir la obra al array
+    console.log(`Se ha añadido la obra:`, nuevaObra);
+}
+
+// Ejemplo de uso:
+addObra("Frida Kahlo", "The Two Fridas", 1939, true);
+addObra("Michelangelo", "David", 1504, false);
+
+console.log(ArtGallery);
+
 //-----------------------------------------------------------------
 //EJERCICIO 9: Agregar una función que permita cambiar el estado de isExhibited de una obra específica enviándole el id.
 //-----------------------------------------------------------------
 console.log("Ejercicio 7");
+
+function estadoDeLaObra(id) {
+    const obra = ArtGallery.find(art => art.id === id); // Buscar la obra por ID
+    if (obra) {
+        obra.isExhibited = !obra.isExhibited; // Cambiar el estado
+        console.log(`El estado de "isExhibited" para la obra con ID ${id} ha sido cambiado a ${obra.isExhibited}.`);
+    } else {
+        console.log(`No se encontró ninguna obra con el ID ${id}.`);
+    }
+}
+
+console.log(ArtGallery);
